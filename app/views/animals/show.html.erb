@@ -1,0 +1,10 @@
+<h1>Informações dos animais</h1>
+<p>Nome: <%= @animal.nome %></p>
+<p>Especie: <%= @animal.especie %></p>
+<p>Cidade: <%= @animal.cidade %></p>
+<p>Bairro: <%= @animal.bairro %></p>
+
+
+<p><%= link_to 'Delete um Animal', animal_path(@animal), data: {turbo_method: :delete, turbo_confirm: "Tem certeza?"} %></p>
+
+<p><%= link_to 'Editar', edit_animal_path(@animal) %></p>
