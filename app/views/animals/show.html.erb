@@ -1,3 +1,4 @@
+<div class="container py-5">
 <h1>Informações dos animais</h1>
 <p>Nome: <%= @animal.nome %></p>
 <p>Especie: <%= @animal.especie %></p>
@@ -5,6 +6,8 @@
 <p>Bairro: <%= @animal.bairro %></p>
 
 
-<p><%= link_to 'Delete um Animal', animal_path(@animal), data: {turbo_method: :delete, turbo_confirm: "Tem certeza?"} %></p>
+<p><%= link_to 'Excluir Animal', animal_path(@animal), method: :delete, data: {turbo_method: :delete, turbo_confirm: "Tem certeza?"}, class: 'btn btn-danger', role: 'button' %></p>
 
-<p><%= link_to 'Editar', edit_animal_path(@animal) %></p>
+<p><%= link_to 'Editar', edit_animal_path(@animal), class: 'btn btn-primary', role: 'button' %></p>
+<p><%= link_to 'Voltar', animals_path, class: 'btn btn-secondary' %></p>
+</div>
